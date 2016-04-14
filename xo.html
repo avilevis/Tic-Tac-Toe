@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>xo</title>
+    <link rel="stylesheet" type="text/css" href="xo.css">
+    <script type="text/javascript" src="jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="xo.js"></script>
+    <script id="board" type="text/x-mustache-template">
+        <div class="info_container">
+            player: <span id="player"></span> you have <span id="timer">0</span>/5 sec
+        </div>
+        <table id="ox_board">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div id="msg"></div>
+        <button id="next_game" class="disabled">next match</button>
+        <div id="tour_container" class="disabled">
+            <div id="tour_msg"></div>
+            <div id="tour_stats"></div>
+        </div>
+    </script>
+</head>
+
+<body>
+    <h2>
+        xo Game
+    </h2>
+    <div class="playes_container">
+        <input id="p1_name" type="text"/>
+        <input id="p2_name" type="text"/>
+    </div>
+    <div id="game_container">
+        <button onclick="start_game()">Click to Start</button>
+    </div>
+</body>
+</html>
